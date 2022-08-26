@@ -1,0 +1,334 @@
+Nuevo cursop practico de JavaScript:    
+
+Clase 1 
+
+Clase 2 Test de javaScript
+
+Variables y operaciones
+1 Responde las siguientes preguntas en la sección de comentarios:
+*¿Qué es una variable y para que sirve?
+Una variable es un espacio en memoria y sirve para guardar diferentes tipos.
+* ¿Cuál es la diferencia entre declarar e inicializar una variable?
+Declarar una variable es el nombre que se dará en memoria y inicializarla es el valor que tiene esta variable ya declarada.
+* ¿Cuál es la diferencia entre sumar números y concatenar Strings?
+Sumamos un string cuando es de tipo (Number), Eje: var = 2 + 4, y concatenamos un string cuando es de tipo: (strings) o cadenas de texto, Eje: var = 4 + "6".
+*¿Cuál operador me permite sumar o concatenar? 
+El operador utilizado es el  +
+
+2) Determina el nombre y tipo de dato para almacenar en variables la siguiente información
+*Nombre = "string"
+*Apellido = "String"
+*Nombre de usuario = "String"
+*Edad = Number
+*Correo electronico = "String"
+*Mayor de edad = Bolean
+*Dinero ahorrado = Number
+*Deudas = Number
+
+3) Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en comentarios
+* var name = "Yesid";
+* var lastname = "Espitia";
+* var userName = "0YeSid11";
+* var age = 26;
+* var mail = "yesidfut@hotmail.com";
+* var adult = "bolean";
+* saveMoney = 50;
+* var debt = 20;
+
+4) Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+```
+var name = "Yesid";
+var lastname = "Espitia Zarate";
+var nombreCompleto = name + " " + lastname;
+console.log(`Mi nombre es: ${nombreCompleto}`);  
+```
+
+```
+var disponible = 50;
+var miDeuda = 20;
+var miDinero = 50 - 20;
+console.log(`Mi dinero actual es ${miDinero}`);
+```
+
+Funciones
+1 ¿Qué es una función?
+Es un conjunto de procedimientos o tareas que se hacen dentro de la funcion 
+para hacer pasos o calculos
+2 ¿Cuándo me sirve usar una función en mi código?
+Cuando se tienen variables o bloques de codigo que se comportan como parametro
+o argumentos que se pueden encapsular y utilziar mas de una vez.
+3 ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+Parametro se define en la propiedad de la funcion y el argumento el valor 
+interno que se le puede dar a este.          
+
+const name = "Yesid";
+const lastname = "Espitia Zarate";
+const completeName = name + lastname;
+const nickname = "YeYo";
+undefined
+function nombreInstructor(name, lastname, nickname){
+    return console.log(`Mi nombre es: ${completeName}, pero prefiero que me digan ${nickname}`);
+};
+nombreInstructor("Yesid", "Espitia Zarate", "YeYo");
+
+Condicionales
+1)Responde las siguientes preguntas en las sección de comentarios:
+* ¿Qué es un condicional?
+Son reglas que aplicamos para poder validar si las sentencias son true o false 
+*¿Qué tipos de condicionales existen en javaScript y cuales son sus diferencias?
+if  (Lo que se ponga aqui debe ser verdad)
+else if (Si no ocurre el if esta seria la segunda opcion)
+else  (Si ninguna de las condiciones anterior ocurre, esta sera la ultima opción ).
+*¿Puedo combinar funciones y condicionales?
+Si
+2) Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+
+var tipoDeSuscripcion = "Expert";
+if(tipoDeSuscripcion === "Free") {
+    console.log("Solo puedes tomar los cursos gratis");
+}else if (tipoDeSuscripcion === "Basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+}else if (tipoDeSuscripcion === "Expert") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+}else if (tipoDeSuscripcion === "ExpertPlus") {
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}else {
+    console.log("Inscribete a Platzi ahora!");	
+}
+
+
+3 ️Replica el comportamiento de tu condicional anterior con if, else y else if, 
+pero ahora solo con if (sin else ni else if).
+💡 Bonus: si ya eres una experta o experto en el lenguaje,
+ te desafío a comentar cómo replicar este comportamiento 
+con arrays u objetos y un solo condicional. 😏
+
+var tiposDeSuscripcion = {
+    free:"Solo puedes tomar los cursos gratis", 
+    basic:"Puedes tomar casi todos los cursos de Platzi durante un mes", 
+    expert:"Puedes tomar casi todos los cursos de Platzi durante un año", 
+    expertPlus:"Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+};
+
+var mysuscription = "free"
+
+if (Object.keys(tiposDeSuscripcion).includes(mysuscription)) {
+    console.log(tiposDeSuscripcion[mysuscription]);
+}
+
+Ciclos
+1) Responde las siguientes preguntas en la sección de comentarios:
+¿Qué es un ciclo?
+Es una manera rapida y sencilla en la cual una tarea pueda repetirse de tal forma
+que no lo tengamos que realizar de manera manual.
+¿Qué tipos de ciclos existen en JavaScript?
+Ciclo for, ciclo for of, cicho while.
+¿Qué es un ciclo infinito y por qué es un problema?
+Es cuando la tarea asignada no se cumple y genera un problema con el navegador
+¿Puedo mezclar ciclos y condicionales?
+Si, Eje:
+ let saludar = ["Como estas?"];
+
+ for (let index = 0; index < saludar.length; index++) {
+     if (saludar == "Hola!") {
+         console.log("Te esta saludando");
+     } else {
+         console.log("Eso no es un saludo!🙄");
+     }
+  }
+
+2) Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+let i = 0;
+while(i < 5) {
+	console.log("El valor de i es: " + i);	
+	i++;
+}
+
+let i = 10;
+
+while(i >= 2) {
+	console.log("El valor de i es: " + i);	
+	i--;
+}
+
+3) Escribe un código en JavaScript que le pregunte a los usuarios 
+cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, 
+pero si responden mal, volvemos a empezar.
+💡 Pista: puedes usar la función prompt de JavaScript.
+
+¿Responder las siguientes pereguntas?
+¿Que es un array?
+es una estructura de datos y un tipo objeto que es un valor que guarda mas
+valores adentro(Pueden ser numeros, string, objetos, arrays) y es la forma 
+de generar una estructura de datos
+¿Que es un objeto?
+propiedades que se entienden entre palabras clave y valores
+¿Cuando es mejor usar objetos o arrays?
+Cuando la estructura a representar es un listado de datos es aconsesjable usar 
+array, cuando la estructura a representar es una entidad independiente con propiedades
+relacionadas entre sí es aconsejable usarlo como un objeto.
+¿Puedo mezclar arrays con objetos o incluso objetos con arrays??
+Sí para cada caso se especifica como tipo de dato que almacenara en
+su sección o nivel dado.
+Podemos tener un array de objetos, por ejemplo un listado de Personas 
+podría ser representado como un array de objetos personas, así mismo un 
+objeto puede tener entre sus propiedades un listado de datos, por ejemplo 
+una Persona puede tener un listado de telefonos de contacto.
+
+*Crea una función que pueda recibir cualquier array como parámetro e 
+imprima su primer elemento.
+
+let huesos = ["Húmero", "Costilla", "Cubito", "Radio", "Craneo","Peroné"];
+
+function shareArray(miArray){
+	console.log("First value: "+ miArray[0]);
+	console.log("List of elements: ");
+}
+
+shareArray(huesos);
+
+*Crea una función que pueda recibir cualquier array como parámetro e imprima 
+todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+let huesos = ["Húmero", "Costilla", "Cubito", "Radio", "Craneo","Peroné"];
+
+function readArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(`${i + 1}${array[i]}`)
+  }
+}
+readArray(myArray);
+
+
+* Crea una función que pueda recibir cualquier objeto como parámetro e
+imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo). 
+let mariposas = {
+"Monarca" : "Danaus plexippus",
+"Cebra" : "Heliconius charithonia",
+"reina" : "Danaus gilippus",
+"alas de telaraña" : "Leptotes marina"
+}
+
+
+function takeObject(obj){
+console.log("List of elements: ");
+for (var i in obj) {
+console.log(mariposas[i]);
+}
+}
+
+takeObject(mariposas);	
+
+Clase 3 Variables
+*Espacios en memoria que pueden guardar cosas como (Caracteres, string, numeros, 
+boleanos) incuso tambien podemos guardar, funciones, ejecutar una funcion c
+on ciertos argumentos.
+* Al nombrar las variables con "var" nos puede fallar en el futuro.
+let nos permite cambiar el valor de nuestras variables en el futuro, al cambiar 
+el nombre de la variable ya declarada se le dice reinicializar.
+* Por convencion no se creara los nombres de las variables empezando la primera
+letra en mayuscula ya que se deja para las clsases (prototipos).
+
+Clase 4 Funciones
+* Las funciones son la forma en la que encapsulamos bloques de codigo (Lineas
+de codigo, donde se tienen variables ciclos, condicionales, etc) para que 
+sean ejecutables y reutilizables en el futuro.
+* Nos sirve cuando tenemos codigo repetido, cuando se tiene variables muy 
+parecidas una con la otra cambiando ciertos valores como un parametro o un 
+argumento y tambien nos sirve para ordenar y mejorar la legibilidad de nuestro 
+codigo.
+*Los parametros son lo que recibe una funcion cuando la estamos creando, 
+pero cuando las vamos a ejecutar ya no se reciben parametros en una funcion,
+ahora estamos enviando argumentos a nuestra funcion.
+
+Clase 5 Condicionales
+Son la forma en que se ejecutan bloques de codigo dependiendo de alguna condicion
+o validación. 
+* El condicional if,  else y else if nos permite hacer validaciones completas 
+distintas si asi queremos en cada condicional, en cambio el sitch todos los cases se 
+comparan con la misma variable 
+*Las funciones pueden encapsulas cualquier bloque de codigo incluyen
+
+Clase 6 Ciclos 
+*Es la forma de ejecutar un bloque cobvic 
+*Tipos de ciclos:
+ while, doo while y for
+*un ciclo infinito es cuando nuestra condicion o validacion nunca 
+se cumple (se repiten una u otra vez(el navegador no puede ma)).
+Si se pueden mezclar ciclos y condicionales, aunque los ciclos son una
+especie de condicionales, nada nos puede impedir agregar mas 
+condicionales dentro del ciclo.
+
+Clase 7 Arrays y  objetos
+Base fundamental el cual se puede contruir otro tipo de lineas 
+¿Que es array?
+ Es una lista de elementos pero cada elemento tiene un nombre clave 
+*¿Cuando es mejor usar objetos o arrays?
+Arrays cuando lo que haremos en un elemento es lo mismo que en todos 
+los demás (la regla se puede incumplir), Mientras que un objeto cuando
+los nombres de cada elemento son importantes para nuestro algoritmo.
+*Puedo mezclar arrays con objetos o incluso objetos con arrays.
+Sí. los arrays pueden guardar objetos. Y los objetos pueden guardar 
+arrays entre sus propiedades.
+obje t.value() Nos ayuda a crear una array con cada uno de los valores
+de un objeto
+
+Sólucion para 
+function imprimirElementoPorElementoObjeto(obj) { 
+    const arr = Object.values(obj);
+dor (let i = 0; i < arr.length; i++) {
+    console.log(arr[i])
+    }
+}  
+imprimirElementoPorElementoObjeto(obj)
+ 
+QUIZ:
+*Los ciclos while primero ejecutan y después validan su condicional. 
+Mientras que los ciclos do while primero validan su condición y luego 
+sí ejecutan su bloque de código.
+a:Falso
+*Tienes un condicional if dentro de una función. Si tu condicional se 
+cumple, el resto de tu función NO se debe ejecutar. ¿Cómo lo harías?
+Agregando un return; antes de que termine mi condicional
+*Tienes el siguiente bloque de código: console.log("Juanita"). ¿Qué es 
+"Juanita" para la función console.log?
+
+
+
+
+
+
+
+Un argumento.
+*¿Qué palabra reservada usarías para crear una variable que nunca
+pueda cambiar su valor?
+const
+
+Clase 9 Como conectar JavaScript con HTML
+Hay varias formas para utilizar JavaScript (Utilizarlo en el fronted, como 
+para el backend)
+Y la forma de ejecutarlo es con un entorno de ejecucion de JS (Browser, nodejs)
+NOta: Lo ideas se puede separar cuando salg en españau m
+
+Clase 10 Leyendo HTML desde JavaScript 
+Funciones de JavaScript que nos da el navegador que no utilizamos antes; NOTA:
+en nodejs o el backend no se tienen estas funciones.
+La forma profesional de trabajar es creando variables que representen a los 
+selectores de cada uno de nuestros elementos.
+El querySelector nos pide que seleccionemos cuales son las etiquetas, id o clases
+que queremos seleccionar a algo en Html   
+
+Clase 11 Escribiendo HTML desde JavaScript
+La propiedad innerHTML de nuestros elementos nos permite moficiar el HTML que 
+este dentro de nuestra etiqueta seleccionada.
+innerText lo transforma todo a texto. 
+
+Clase 12 Eventos en JavaScript: Interactuando con usuarios
+Una de las formas de escuchar eventos de algun elemento desde JavaScript en 
+Html lo hacemos agregando el atributo "onClick" en el button, si estuvieramos
+trabajando dentro de un input seria "onchange" 
+Siguiendo la sintaxis de cualquier atributo en html debemos decirle cual es el
+codigo JavaScript que debe ejecutar en cualquier de estos casos. 
+
+
